@@ -21,4 +21,9 @@ export class SidebarButton {
     this.router.navigate([this.ruta]);
   }
 
+  activo(): boolean{
+    return this.router.url === this.ruta ||
+    (this.ruta === '' && this.router.url === '/')
+  }
+
 }

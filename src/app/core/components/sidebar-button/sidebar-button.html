@@ -1,5 +1,5 @@
 <div>
-  <button
+  <!-- <button
     (click)="navegar()"
     class="
     w-full
@@ -15,5 +15,24 @@
     transition
     ">
     {{ texto }}
-  </button>
+  </button> -->
+  <button
+  (click)="navegar()"
+  [ngClass]="{
+    'text-cyan-500 text-shadow-[0_0_1px_rgba(255,255,255,0.8),0_0_2px_rgba(255,255,255,0.6),0_0_3px_rgba(255,255,255,0.4)] hover:text-shadow-[0_0_2px_rgba(255,255,255,0.8),0_0_3px_rgba(255,255,255,0.6),0_0_4px_rgba(255,255,255,0.4)]': activo(),
+    'text-white text-shadow-[0_0_2px_rgba(56,189,248,0.8),0_0_3px_rgba(56,189,248,0.6),0_0_4px_rgba(56,189,248,0.4)] hover:text-shadow-[0_0_5px_rgba(56,189,248,1),0_0_8px_rgba(56,189,248,0.8),0_0_10px_rgba(56,189,248,0.6)]': !activo()
+  }"
+  class="
+    w-full
+    text-left
+    uppercase
+    tracking-widest
+    px-4 py-2
+    bg-transparent
+    font-bold
+    transition
+  "
+>
+  {{ texto }}
+</button>
 </div>
