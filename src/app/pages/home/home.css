@@ -1,0 +1,40 @@
+.neon-text {
+  text-shadow:
+    0 0 1px rgba(56, 189, 248, 0.6),
+    0 0 3px rgba(56, 189, 248, 0.4),
+    0 0 5px rgba(56, 189, 248, 0.3);
+}
+
+.neon-shadow:hover {
+  text-shadow:
+    0 0 2px rgba(56, 189, 248, 0.8),
+    0 0 5px rgba(56, 189, 248, 0.5),
+    0 0 8px rgba(56, 189, 248, 0.4);
+}
+
+.typing {
+  --caracteres: 90ch;
+  --caracteres-step:90;
+
+  width: 0;
+  display: inline-block;
+  border-right: 8px solid #38bdf8;
+  /* cursor */
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(var(--caracteres-step), end) forwards 0.8s,
+  blink 0.75s step-end infinite;
+}
+
+
+@keyframes typing {
+  to {
+    width: var(--caracteres)
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
