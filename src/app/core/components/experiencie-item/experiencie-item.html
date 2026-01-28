@@ -1,0 +1,60 @@
+<div class="relative pl-12 mb-12">
+
+  <!-- Punto del timeline -->
+  <div
+    class="absolute left-2.5 top-3 w-3 h-3 rounded-full bg-sky-400
+           shadow-[0_0_10px_rgba(56,189,248,0.8)]">
+  </div>
+
+  <!-- Card -->
+  <div
+    class="bg-zinc-950/70 border border-sky-900 rounded-xl p-6
+           transition hover:border-sky-400">
+
+    <!-- Título -->
+    <h3 #escritor class="text-2xl font-semibold text-white mb-1 font-mono typing">
+      {{ titulo }}
+    </h3>
+
+    <h2 class="text-lg text-white mb-1 neon-text font-mono">
+      {{ empresa }}
+    </h2>
+
+    <!-- Periodo -->
+    <span class="text-sm text-sky-400">
+      {{ periodo }}
+    </span>
+
+    <!-- Descripción -->
+    <p class="mt-3 text-zinc-300 leading-relaxed">
+      {{ descripcion }}
+    </p>
+
+    <!-- Íconos -->
+    @if(iconos.length > 0){
+      <div class="flex flex-wrap gap-4 mt-4 text-white text-2xl">
+        @for (icono of iconos; track icono){
+          <img src="{{ icono }}" alt="icono" />
+        }
+      </div>
+    }
+
+    <!-- @if(iconos.length > 0){
+      <div class="flex flex-wrap gap-4 mt-4 text-white text-2xl">
+        @for (icono of iconos; track icono){
+          <i class="{{ icono }}"></i>
+        }
+      </div>
+    } -->
+
+    <!-- <div *ngIf="iconos.length"
+         class="flex flex-wrap gap-4 mt-4 text-sky-400 text-xl">
+
+      <i *ngFor="let icono of iconos"
+         [class]="icono"
+         class="transition hover:text-sky-300">
+      </i>
+
+    </div> -->
+  </div>
+</div>
