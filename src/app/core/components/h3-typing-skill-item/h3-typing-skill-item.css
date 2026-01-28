@@ -1,0 +1,30 @@
+.typing {
+  width: 0;
+  display: inline-block;
+  border-right: 3px solid #38bdf8;
+  /* cursor */
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 1s steps(var(--caracteres-step), end) forwards var(--retardo),
+    blink 0.75s step-end 4,
+    hide-cursor 0s forwards calc(var(--retardo) + 1s + 2s)
+}
+
+
+@keyframes typing {
+  to {
+    width: var(--caracteres)
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+@keyframes hide-cursor {
+  to {
+    border-color: transparent;
+  }
+}
