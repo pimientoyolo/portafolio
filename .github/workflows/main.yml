@@ -31,7 +31,7 @@ jobs:
       # Install dependencias
       - name: Install dependencias
         run: npm i
-        
+
       #Build the app
       - name: Build app
         run: npm run build:prod
@@ -40,8 +40,8 @@ jobs:
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4.2.0
         with:
-          build_dir: dist/
+          build_dir: dist/portafolio/
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
-        
+
