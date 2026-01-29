@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { ProjectItem } from '../../core/components/project-item/project-item';
 
 @Component({
   selector: 'app-projects',
-  imports: [],
+  standalone: true,
+  imports: [ProjectItem],
   templateUrl: './projects.html',
   styleUrl: './projects.css',
 })
