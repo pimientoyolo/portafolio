@@ -36,6 +36,10 @@ jobs:
       - name: Build app
         run: npm run build:prod
 
+      # Re name file
+      - name: Rename index for routing
+        run: mv dist/portafolio/browser/index.html dist/portafolio/browser/404.html
+
       # deploy ghp
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4.2.0
